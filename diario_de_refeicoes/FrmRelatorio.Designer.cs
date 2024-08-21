@@ -32,6 +32,7 @@
             mskDataFinal = new MaskedTextBox();
             btnFiltrar = new Button();
             grdResult = new DataGridView();
+            lblPontosSomados = new Label();
             ((System.ComponentModel.ISupportInitialize)grdResult).BeginInit();
             SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             // 
             // mskDataFinal
             // 
-            mskDataFinal.Location = new Point(208, 23);
+            mskDataFinal.Location = new Point(141, 23);
             mskDataFinal.Mask = "00/00/0000";
             mskDataFinal.Name = "mskDataFinal";
             mskDataFinal.Size = new Size(100, 23);
@@ -55,7 +56,7 @@
             // 
             // btnFiltrar
             // 
-            btnFiltrar.Location = new Point(640, 25);
+            btnFiltrar.Location = new Point(640, 54);
             btnFiltrar.Name = "btnFiltrar";
             btnFiltrar.Size = new Size(75, 23);
             btnFiltrar.TabIndex = 4;
@@ -70,14 +71,23 @@
             grdResult.Name = "grdResult";
             grdResult.ReadOnly = true;
             grdResult.RowTemplate.Height = 25;
-            grdResult.Size = new Size(703, 359);
+            grdResult.Size = new Size(622, 359);
             grdResult.TabIndex = 5;
+            // 
+            // lblPontosSomados
+            // 
+            lblPontosSomados.AutoSize = true;
+            lblPontosSomados.Location = new Point(247, 28);
+            lblPontosSomados.Name = "lblPontosSomados";
+            lblPontosSomados.Size = new Size(0, 15);
+            lblPontosSomados.TabIndex = 6;
             // 
             // FrmRelatorio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(728, 425);
+            Controls.Add(lblPontosSomados);
             Controls.Add(grdResult);
             Controls.Add(btnFiltrar);
             Controls.Add(mskDataFinal);
@@ -95,5 +105,6 @@
         private MaskedTextBox mskDataFinal;
         private Button btnFiltrar;
         private DataGridView grdResult;
+        private Label lblPontosSomados;
     }
 }

@@ -130,13 +130,14 @@ namespace diario_de_refeicoes
                         conexao.Open();
 
                         // Comando SQL com parâmetros
-                        string comandoSql = "INSERT INTO RegistroRefeicoes (Nome, DataRealizado, Realizado) VALUES (@Valor1, @Valor2, @Valor3)";
+                        string comandoSql = "INSERT INTO RegistroRefeicoes (Nome, DataRealizado, Realizado, Ponto) VALUES (@Valor1, @Valor2, @Valor3, @Valor4)";
                         using (SqlCommand cmd = new SqlCommand(comandoSql, conexao))
                         {
                             // Adicionar parâmetros com valores correspondentes
                             cmd.Parameters.AddWithValue("@Valor1", cmbRefeicao.Text); // Ou use .SelectedItem.ToString() se preferir
                             cmd.Parameters.AddWithValue("@Valor2", txtDataRealizado.Text); // Acessar o texto do TextBox
                             cmd.Parameters.AddWithValue("@Valor3", cmbRealizado.Text); // Ou use .SelectedItem.ToString() se preferir
+                            cmd.Parameters.AddWithValue("@Valor4", getPontoRefeicao(cmbRealizado.Text)); // Ou use .SelectedItem.ToString() se preferir
 
                             // Executar o comando
                             int result = cmd.ExecuteNonQuery();
@@ -144,6 +145,8 @@ namespace diario_de_refeicoes
                             if (result > 0)
                             {
                                 MessageBox.Show("Registrado com sucesso!");
+                                Close();
+
                             }
                             else
                             {
@@ -161,6 +164,22 @@ namespace diario_de_refeicoes
             {
                 MessageBox.Show("ERR-00: O registro não foi salvo. Verifique os campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private decimal getPontoRefeicao(string TipoRealizado)
+        {
+            decimal ponto = 0.00m;
+
+            switch (TipoRealizado)
+            {
+                case "De acordo com o proposto": ponto = 2; break;
+                case "Não atingiu quantidade": ponto = 1.50m; break;
+                case "Não realizado": ponto = 0; break;
+                case "Substituído": ponto = 2; break;
+                case "Refeição Livre": ponto = 1; break;
+                default: ponto = 0; break;
+            }
+            return ponto;
         }
     }
 }

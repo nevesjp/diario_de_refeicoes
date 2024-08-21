@@ -45,7 +45,7 @@ namespace diario_de_refeicoes
             DateTime dataInicial = DateTime.Parse(mskDataInicial.Text).Date;
             DateTime dataFinal = DateTime.Parse(mskDataFinal.Text).Date.AddHours(23).AddMinutes(59);
 
-            string queryString = "SELECT Nome, DataRealizado, Realizado FROM RegistroRefeicoes " +
+            string queryString = "SELECT Nome, DataRealizado, Realizado, ISNULL(Ponto, 0) AS Score FROM RegistroRefeicoes " +
                                  "WHERE DataRealizado BETWEEN @DataInicial AND @DataFinal";
 
             using (SqlConnection conexao = new SqlConnection(StringConexao))
@@ -63,11 +63,31 @@ namespace diario_de_refeicoes
 
                 // Se necessário, atualiza a exibição do DataGridView
                 grdResult.Refresh();
+
+                if (table.Rows.Count > 0)
+                {
+                    decimal pontosSomados = table.AsEnumerable().Sum(row => row.Field<decimal>("Score"));
+                    decimal pontosEsperados = table.Rows.Count * 2.0m;
+                    double percentualAtingido = pontosEsperados > 0 ? (double)(pontosSomados / pontosEsperados) * 100 : 0;
+
+                    lblPontosSomados.Text = string.Format("Pontos somados no período: {0}. Pontos esperados: {1}. Atingiu: {2}%",
+                                              pontosSomados.ToString("0.00"),
+                                              pontosEsperados.ToString("0.00"),
+                                              percentualAtingido.ToString("0.00"));
+                    if (percentualAtingido >= 80)
+                    {
+                        lblPontosSomados.ForeColor = Color.Green;
+                    }
+                    else if (percentualAtingido >= 50 && percentualAtingido < 80)
+                    {
+                        lblPontosSomados.ForeColor = Color.Orange;
+                    }
+                    else
+                    {
+                        lblPontosSomados.ForeColor = Color.Red;
+                    }
+                }
             }
         }
-
-
-
-
     }
 }
