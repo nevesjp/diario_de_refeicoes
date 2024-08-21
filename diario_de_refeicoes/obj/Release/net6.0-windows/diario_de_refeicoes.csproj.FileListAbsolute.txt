@@ -63,3 +63,4 @@ C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windo
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.pdb
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.genruntimeconfig.cache
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\ref\diario_de_refeicoes.dll
+C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.FrmRelatorio.resources

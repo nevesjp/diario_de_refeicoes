@@ -30,7 +30,7 @@
         {
             label1 = new Label();
             btnRegistrar = new Button();
-            button2 = new Button();
+            btnRelatorio = new Button();
             btnSair = new Button();
             SuspendLayout();
             // 
@@ -54,14 +54,15 @@
             btnRegistrar.UseVisualStyleBackColor = true;
             btnRegistrar.Click += btnRegistrar_Click;
             // 
-            // button2
+            // btnRelatorio
             // 
-            button2.Location = new Point(389, 187);
-            button2.Name = "button2";
-            button2.Size = new Size(171, 63);
-            button2.TabIndex = 2;
-            button2.Text = "Gerar Relatório (em breve)";
-            button2.UseVisualStyleBackColor = true;
+            btnRelatorio.Location = new Point(389, 187);
+            btnRelatorio.Name = "btnRelatorio";
+            btnRelatorio.Size = new Size(171, 63);
+            btnRelatorio.TabIndex = 2;
+            btnRelatorio.Text = "Gerar Relatório (em breve)";
+            btnRelatorio.UseVisualStyleBackColor = true;
+            btnRelatorio.Click += btnRelatorio_Click;
             // 
             // btnSair
             // 
@@ -80,7 +81,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(612, 450);
             Controls.Add(btnSair);
-            Controls.Add(button2);
+            Controls.Add(btnRelatorio);
             Controls.Add(btnRegistrar);
             Controls.Add(label1);
             Name = "FrmPrincipal";
@@ -93,7 +94,7 @@
 
         private Label label1;
         private Button btnRegistrar;
-        private Button button2;
+        private Button btnRelatorio;
         private Button btnSair;
     }
 }

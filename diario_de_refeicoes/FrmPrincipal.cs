@@ -27,5 +27,11 @@ namespace diario_de_refeicoes
             FrmRegistroRefeicao f = new FrmRegistroRefeicao();
             f.Show();
         }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            FrmRelatorio f = new FrmRelatorio();
+            f.Show();
+        }
     }
 }
