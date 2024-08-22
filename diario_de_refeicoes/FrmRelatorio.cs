@@ -70,6 +70,8 @@ namespace diario_de_refeicoes
                     decimal pontosEsperados = table.Rows.Count * 2.0m;
                     double percentualAtingido = pontosEsperados > 0 ? (double)(pontosSomados / pontosEsperados) * 100 : 0;
 
+                    prgBarTeste.Value = (int)percentualAtingido;
+
                     lblPontosSomados.Text = string.Format("Pontos somados no período: {0}. Pontos esperados: {1}.",
                                               pontosSomados.ToString("0.00"),
                                               pontosEsperados.ToString("0.00"));
@@ -162,6 +164,10 @@ namespace diario_de_refeicoes
             {
                 MessageBox.Show("Por favor, insira uma data válida.");
             }
+        }
+
+        private void prgBarTeste_Click(object sender, EventArgs e)
+        {
         }
     }
 }

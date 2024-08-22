@@ -39,6 +39,7 @@
             btnMaisDataFinal = new Button();
             btnMenosDataFinal = new Button();
             lblPercentualAtingido = new Label();
+            prgBarTeste = new ProgressBar();
             ((System.ComponentModel.ISupportInitialize)grdResult).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDias).BeginInit();
             SuspendLayout();
@@ -148,11 +149,19 @@
             lblPercentualAtingido.Size = new Size(0, 19);
             lblPercentualAtingido.TabIndex = 13;
             // 
+            // prgBarTeste
+            // 
+            prgBarTeste.Location = new Point(12, 419);
+            prgBarTeste.Name = "prgBarTeste";
+            prgBarTeste.Size = new Size(530, 23);
+            prgBarTeste.TabIndex = 14;
+            // 
             // FrmRelatorio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(554, 425);
+            ClientSize = new Size(554, 453);
+            Controls.Add(prgBarTeste);
             Controls.Add(lblPercentualAtingido);
             Controls.Add(btnMaisDataFinal);
             Controls.Add(btnMenosDataFinal);
@@ -185,5 +194,6 @@
         private Button btnMaisDataFinal;
         private Button btnMenosDataFinal;
         private Label lblPercentualAtingido;
+        private ProgressBar prgBarTeste;
     }
 }
