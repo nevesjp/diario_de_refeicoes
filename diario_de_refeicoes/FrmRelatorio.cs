@@ -70,23 +70,97 @@ namespace diario_de_refeicoes
                     decimal pontosEsperados = table.Rows.Count * 2.0m;
                     double percentualAtingido = pontosEsperados > 0 ? (double)(pontosSomados / pontosEsperados) * 100 : 0;
 
-                    lblPontosSomados.Text = string.Format("Pontos somados no período: {0}. Pontos esperados: {1}. Atingiu: {2}%",
+                    lblPontosSomados.Text = string.Format("Pontos somados no período: {0}. Pontos esperados: {1}.",
                                               pontosSomados.ToString("0.00"),
-                                              pontosEsperados.ToString("0.00"),
-                                              percentualAtingido.ToString("0.00"));
+                                              pontosEsperados.ToString("0.00"));
+                    lblPercentualAtingido.Text = string.Format("Atingiu: {0}%", percentualAtingido.ToString("0.00"));
                     if (percentualAtingido >= 80)
                     {
                         lblPontosSomados.ForeColor = Color.Green;
+                        lblPercentualAtingido.ForeColor = Color.Green;
                     }
                     else if (percentualAtingido >= 50 && percentualAtingido < 80)
                     {
                         lblPontosSomados.ForeColor = Color.Orange;
+                        lblPercentualAtingido.ForeColor = Color.Orange;
                     }
                     else
                     {
                         lblPontosSomados.ForeColor = Color.Red;
+                        lblPercentualAtingido.ForeColor = Color.Red;
                     }
                 }
+                else
+                {
+                    lblPontosSomados.Text = "Nenhum resultado foi encontrado.";
+                    lblPontosSomados.ForeColor = Color.Red;
+                    lblPercentualAtingido.Text = "";
+                }
+            }
+        }
+
+
+        private void btnMenosDataInicial_Click(object sender, EventArgs e)
+        {
+            if (DateTime.TryParse(mskDataInicial.Text, out DateTime dataInicial))
+            {
+                // Subtrai o valor 
+                dataInicial = dataInicial.AddDays(-(int)numDias.Value);
+
+                // Atualiza com a nova data
+                mskDataInicial.Text = dataInicial.ToString("dd/MM/yyyy");
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira uma data válida.");
+            }
+        }
+
+        private void btnMaisDataInicial_Click(object sender, EventArgs e)
+        {
+            if (DateTime.TryParse(mskDataInicial.Text, out DateTime dataInicial))
+            {
+                // Subtrai o valor 
+                dataInicial = dataInicial.AddDays((int)numDias.Value);
+
+                // Atualiza com a nova data
+                mskDataInicial.Text = dataInicial.ToString("dd/MM/yyyy");
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira uma data válida.");
+            }
+        }
+
+        private void btnMenosDataFinal_Click(object sender, EventArgs e)
+        {
+            if (DateTime.TryParse(mskDataFinal.Text, out DateTime dataFinal))
+            {
+                // Subtrai o valor 
+                dataFinal = dataFinal.AddDays(-(int)numDias.Value);
+
+                // Atualiza com a nova data
+                mskDataFinal.Text = dataFinal.ToString("dd/MM/yyyy");
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira uma data válida.");
+            }
+        }
+
+        private void btnMaisDataFinal_Click(object sender, EventArgs e)
+        {
+            if (DateTime.TryParse(mskDataFinal.Text, out DateTime dataFinal))
+            {
+                // Subtrai o valor 
+                dataFinal = dataFinal.AddDays((int)numDias.Value);
+
+                // Atualiza com a nova data
+                mskDataFinal.Text = dataFinal.ToString("dd/MM/yyyy");
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira uma data válida.");
             }
         }
     }
