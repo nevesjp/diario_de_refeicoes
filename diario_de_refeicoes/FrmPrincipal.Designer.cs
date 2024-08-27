@@ -60,7 +60,7 @@
             btnRelatorio.Name = "btnRelatorio";
             btnRelatorio.Size = new Size(171, 63);
             btnRelatorio.TabIndex = 2;
-            btnRelatorio.Text = "Gerar Relatório (em breve)";
+            btnRelatorio.Text = "Gerar Relatório";
             btnRelatorio.UseVisualStyleBackColor = true;
             btnRelatorio.Click += btnRelatorio_Click;
             // 
