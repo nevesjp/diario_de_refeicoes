@@ -40,6 +40,7 @@
             btnMenosDataFinal = new Button();
             lblPercentualAtingido = new Label();
             prgBarTeste = new ProgressBar();
+            btnLast7Days = new Button();
             ((System.ComponentModel.ISupportInitialize)grdResult).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDias).BeginInit();
             SuspendLayout();
@@ -64,7 +65,7 @@
             // 
             // btnFiltrar
             // 
-            btnFiltrar.Location = new Point(290, 77);
+            btnFiltrar.Location = new Point(467, 77);
             btnFiltrar.Name = "btnFiltrar";
             btnFiltrar.Size = new Size(75, 23);
             btnFiltrar.TabIndex = 4;
@@ -156,11 +157,22 @@
             prgBarTeste.Size = new Size(530, 23);
             prgBarTeste.TabIndex = 14;
             // 
+            // btnLast7Days
+            // 
+            btnLast7Days.Location = new Point(290, 77);
+            btnLast7Days.Name = "btnLast7Days";
+            btnLast7Days.Size = new Size(75, 23);
+            btnLast7Days.TabIndex = 15;
+            btnLast7Days.Text = "Last 7 days";
+            btnLast7Days.UseVisualStyleBackColor = true;
+            btnLast7Days.Click += btnLast7Days_Click;
+            // 
             // FrmRelatorio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(554, 453);
+            Controls.Add(btnLast7Days);
             Controls.Add(prgBarTeste);
             Controls.Add(lblPercentualAtingido);
             Controls.Add(btnMaisDataFinal);
@@ -195,5 +207,6 @@
         private Button btnMenosDataFinal;
         private Label lblPercentualAtingido;
         private ProgressBar prgBarTeste;
+        private Button btnLast7Days;
     }
 }

@@ -169,5 +169,23 @@ namespace diario_de_refeicoes
         private void prgBarTeste_Click(object sender, EventArgs e)
         {
         }
+
+        private void btnLast7Days_Click(object sender, EventArgs e)
+        {
+            if (DateTime.TryParse(mskDataInicial.Text, out DateTime dataInicial))
+            {
+                // Subtrai o valor 
+                dataInicial = dataInicial.AddDays(-7);
+
+                // Atualiza com a nova data
+                mskDataInicial.Text = dataInicial.ToString("dd/MM/yyyy");
+
+                btnFiltrar_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira uma data válida.");
+            }
+        }
     }
 }
