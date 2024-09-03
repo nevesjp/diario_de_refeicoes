@@ -175,7 +175,7 @@ namespace diario_de_refeicoes
             if (DateTime.TryParse(mskDataInicial.Text, out DateTime dataInicial))
             {
                 // Subtrai o valor 
-                dataInicial = dataInicial.AddDays(-7);
+                dataInicial = DateTime.Now.AddDays(-7);
 
                 // Atualiza com a nova data
                 mskDataInicial.Text = dataInicial.ToString("dd/MM/yyyy");
