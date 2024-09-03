@@ -45,5 +45,10 @@ namespace diario_de_refeicoes
             FrmRelatorio f = new FrmRelatorio();
             f.Show();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

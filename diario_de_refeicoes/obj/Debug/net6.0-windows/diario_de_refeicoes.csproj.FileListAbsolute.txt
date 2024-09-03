@@ -64,3 +64,4 @@ C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\bin\Debug\net6.0-windows
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Debug\net6.0-windows\diario_de_refeicoes.csproj.CopyComplete
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Debug\net6.0-windows\diario_de_refeicoes.FrmRelatorio.resources
+C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Debug\net6.0-windows\diario_de_refeicoes.Properties.Resources.resources
