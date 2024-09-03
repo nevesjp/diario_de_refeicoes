@@ -71,7 +71,8 @@ namespace diario_de_refeicoes
             string? vlr = cmbRefeicao.SelectedItem as string;
 
             // Habilitar ou desabilitar o TextBox com base na seleção
-            txtDataRealizado.Enabled = !string.IsNullOrEmpty(vlr);
+            //txtDataRealizado.Enabled = !string.IsNullOrEmpty(vlr);
+            dtTimeRealizado.Enabled = !string.IsNullOrEmpty(vlr);
 
             // Dicionário para mapear refeições a horários
             var horarios = new Dictionary<string, DateTime>
@@ -87,7 +88,8 @@ namespace diario_de_refeicoes
             DateTime? date = horarios.TryGetValue(vlr ?? string.Empty, out DateTime horario) ? horario : (DateTime?)null;
 
             // Definir o texto do TextBox com a data e a hora formatada, ou limpar se o horário for null
-            txtDataRealizado.Text = date.HasValue ? date.Value.ToString("dd/MM/yyyy HH:mm") : string.Empty;
+            //txtDataRealizado.Text = date.HasValue ? date.Value.ToString("dd/MM/yyyy HH:mm") : string.Empty;
+            dtTimeRealizado.Text = date.HasValue ? date.Value.ToString("dd/MM/yyyy HH:mm") : string.Empty;
 
             // Habilitar o ComboBox relacionado
             cmbRealizado.Enabled = true;
@@ -99,8 +101,11 @@ namespace diario_de_refeicoes
         {
             if (cmbRefeicao.SelectedItem == null || string.IsNullOrEmpty(cmbRefeicao.SelectedItem.ToString()))
             {
-                txtDataRealizado.Text = "";
-                txtDataRealizado.Enabled = false;
+                //txtDataRealizado.Text = "";
+                //txtDataRealizado.Enabled = false;
+
+                dtTimeRealizado.Text = "";
+                dtTimeRealizado.Enabled = false;
 
                 cmbRealizado.Text = "";
                 cmbRealizado.Enabled = false;
@@ -115,7 +120,8 @@ namespace diario_de_refeicoes
                 !string.IsNullOrEmpty(cmbRefeicao.SelectedItem.ToString()) &&
 
                 // Verificar se txtDataRealizado não está vazio
-                !string.IsNullOrEmpty(txtDataRealizado.Text) &&
+                //!string.IsNullOrEmpty(txtDataRealizado.Text) &&
+                !string.IsNullOrEmpty(dtTimeRealizado.Text) &&
 
                 // Verificar se o item selecionado em cmbRealizado não é null e não está vazio
                 (cmbRealizado.SelectedItem != null && !string.IsNullOrEmpty(cmbRealizado.SelectedItem.ToString()));
@@ -135,7 +141,8 @@ namespace diario_de_refeicoes
                         {
                             // Adicionar parâmetros com valores correspondentes
                             cmd.Parameters.AddWithValue("@Valor1", cmbRefeicao.Text); // Ou use .SelectedItem.ToString() se preferir
-                            cmd.Parameters.AddWithValue("@Valor2", txtDataRealizado.Text); // Acessar o texto do TextBox
+                            //cmd.Parameters.AddWithValue("@Valor2", txtDataRealizado.Text); // Acessar o texto do TextBox
+                            cmd.Parameters.AddWithValue("@Valor2", dtTimeRealizado.Text); // Acessar o texto do TextBox
                             cmd.Parameters.AddWithValue("@Valor3", cmbRealizado.Text); // Ou use .SelectedItem.ToString() se preferir
                             cmd.Parameters.AddWithValue("@Valor4", getPontoRefeicao(cmbRealizado.Text)); // Ou use .SelectedItem.ToString() se preferir
 
@@ -180,6 +187,12 @@ namespace diario_de_refeicoes
                 default: ponto = 0; break;
             }
             return ponto;
+        }
+
+        private void FrmRegistroRefeicao_Load(object sender, EventArgs e)
+        {
+            dtTimeRealizado.Format = DateTimePickerFormat.Custom;
+            dtTimeRealizado.CustomFormat = "dd/MM/yyyy HH:mm";
         }
     }
 }

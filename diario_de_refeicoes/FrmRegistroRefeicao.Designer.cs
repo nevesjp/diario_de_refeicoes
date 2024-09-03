@@ -32,10 +32,10 @@
             lblDataRealizado = new Label();
             lblRealizado = new Label();
             cmbRefeicao = new ComboBox();
-            txtDataRealizado = new TextBox();
             cmbRealizado = new ComboBox();
             btnSalvar = new Button();
             label1 = new Label();
+            dtTimeRealizado = new DateTimePicker();
             SuspendLayout();
             // 
             // lblNome
@@ -75,14 +75,6 @@
             cmbRefeicao.SelectedValueChanged += cmbRefeicao_SelectedValueChanged;
             cmbRefeicao.Leave += cmbRefeicao_Leave;
             // 
-            // txtDataRealizado
-            // 
-            txtDataRealizado.Enabled = false;
-            txtDataRealizado.Location = new Point(154, 136);
-            txtDataRealizado.Name = "txtDataRealizado";
-            txtDataRealizado.Size = new Size(188, 23);
-            txtDataRealizado.TabIndex = 4;
-            // 
             // cmbRealizado
             // 
             cmbRealizado.Enabled = false;
@@ -112,21 +104,30 @@
             label1.TabIndex = 7;
             label1.Text = "Registrar";
             // 
+            // dtTimeRealizado
+            // 
+            dtTimeRealizado.Enabled = false;
+            dtTimeRealizado.Location = new Point(154, 138);
+            dtTimeRealizado.Name = "dtTimeRealizado";
+            dtTimeRealizado.Size = new Size(188, 23);
+            dtTimeRealizado.TabIndex = 8;
+            // 
             // FrmRegistroRefeicao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(495, 260);
+            Controls.Add(dtTimeRealizado);
             Controls.Add(label1);
             Controls.Add(btnSalvar);
             Controls.Add(cmbRealizado);
-            Controls.Add(txtDataRealizado);
             Controls.Add(cmbRefeicao);
             Controls.Add(lblRealizado);
             Controls.Add(lblDataRealizado);
             Controls.Add(lblNome);
             Name = "FrmRegistroRefeicao";
             Text = "FrmRegistroRefeicao";
+            Load += FrmRegistroRefeicao_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,9 +138,9 @@
         private Label lblDataRealizado;
         private Label lblRealizado;
         private ComboBox cmbRefeicao;
-        private TextBox txtDataRealizado;
         private ComboBox cmbRealizado;
         private Button btnSalvar;
         private Label label1;
+        private DateTimePicker dtTimeRealizado;
     }
 }
