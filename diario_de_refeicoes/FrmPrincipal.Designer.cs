@@ -42,7 +42,7 @@
             // 
             // btnRegistrar
             // 
-            btnRegistrar.Location = new Point(48, 187);
+            btnRegistrar.Location = new Point(90, 471);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(171, 63);
             btnRegistrar.TabIndex = 1;
@@ -53,7 +53,7 @@
             // 
             // btnRelatorio
             // 
-            btnRelatorio.Location = new Point(389, 187);
+            btnRelatorio.Location = new Point(267, 471);
             btnRelatorio.Name = "btnRelatorio";
             btnRelatorio.Size = new Size(171, 63);
             btnRelatorio.TabIndex = 2;
@@ -65,7 +65,7 @@
             // btnSair
             // 
             btnSair.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSair.Location = new Point(525, 415);
+            btnSair.Location = new Point(444, 511);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(75, 23);
             btnSair.TabIndex = 3;
@@ -76,10 +76,11 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources._b88da0b8_3fb1_4507_a78e_990a37c960dd;
-            pictureBox1.Location = new Point(-13, 12);
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Image = Properties.Resources._77e24fcf_afd7_4a39_913d_74d564a5b05f;
+            pictureBox1.Location = new Point(-1, 27);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(647, 616);
+            pictureBox1.Size = new Size(519, 517);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
@@ -89,7 +90,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { registrarRefeiçãoToolStripMenuItem, relatóriosToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(622, 24);
+            menuStrip1.Size = new Size(517, 24);
             menuStrip1.TabIndex = 5;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -118,7 +119,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(622, 601);
+            ClientSize = new Size(517, 542);
             Controls.Add(btnSair);
             Controls.Add(btnRelatorio);
             Controls.Add(btnRegistrar);
@@ -126,7 +127,7 @@
             Controls.Add(pictureBox1);
             MainMenuStrip = menuStrip1;
             Name = "FrmPrincipal";
-            Text = "FrmPrincipal";
+            Text = "Menu Principal";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
