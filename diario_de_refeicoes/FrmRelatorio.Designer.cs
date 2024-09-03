@@ -41,6 +41,8 @@
             lblPercentualAtingido = new Label();
             prgBarTeste = new ProgressBar();
             btnLast7Days = new Button();
+            btnAvancar = new Button();
+            btnRetroceder = new Button();
             ((System.ComponentModel.ISupportInitialize)grdResult).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDias).BeginInit();
             SuspendLayout();
@@ -65,7 +67,7 @@
             // 
             // btnFiltrar
             // 
-            btnFiltrar.Location = new Point(467, 77);
+            btnFiltrar.Location = new Point(533, 76);
             btnFiltrar.Name = "btnFiltrar";
             btnFiltrar.Size = new Size(75, 23);
             btnFiltrar.TabIndex = 4;
@@ -80,7 +82,7 @@
             grdResult.Name = "grdResult";
             grdResult.ReadOnly = true;
             grdResult.RowTemplate.Height = 25;
-            grdResult.Size = new Size(532, 307);
+            grdResult.Size = new Size(596, 307);
             grdResult.TabIndex = 5;
             // 
             // lblPontosSomados
@@ -154,7 +156,7 @@
             // 
             prgBarTeste.Location = new Point(12, 419);
             prgBarTeste.Name = "prgBarTeste";
-            prgBarTeste.Size = new Size(530, 23);
+            prgBarTeste.Size = new Size(596, 23);
             prgBarTeste.TabIndex = 14;
             // 
             // btnLast7Days
@@ -167,11 +169,33 @@
             btnLast7Days.UseVisualStyleBackColor = true;
             btnLast7Days.Click += btnLast7Days_Click;
             // 
+            // btnAvancar
+            // 
+            btnAvancar.Location = new Point(452, 76);
+            btnAvancar.Name = "btnAvancar";
+            btnAvancar.Size = new Size(75, 23);
+            btnAvancar.TabIndex = 16;
+            btnAvancar.Text = ">>";
+            btnAvancar.UseVisualStyleBackColor = true;
+            btnAvancar.Click += btnAvancar_Click;
+            // 
+            // btnRetroceder
+            // 
+            btnRetroceder.Location = new Point(371, 77);
+            btnRetroceder.Name = "btnRetroceder";
+            btnRetroceder.Size = new Size(75, 23);
+            btnRetroceder.TabIndex = 17;
+            btnRetroceder.Text = "<<";
+            btnRetroceder.UseVisualStyleBackColor = true;
+            btnRetroceder.Click += btnRetroceder_Click;
+            // 
             // FrmRelatorio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(554, 453);
+            ClientSize = new Size(616, 453);
+            Controls.Add(btnRetroceder);
+            Controls.Add(btnAvancar);
             Controls.Add(btnLast7Days);
             Controls.Add(prgBarTeste);
             Controls.Add(lblPercentualAtingido);
@@ -208,5 +232,7 @@
         private Label lblPercentualAtingido;
         private ProgressBar prgBarTeste;
         private Button btnLast7Days;
+        private Button btnAvancar;
+        private Button btnRetroceder;
     }
 }

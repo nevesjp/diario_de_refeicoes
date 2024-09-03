@@ -52,6 +52,7 @@ C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\bin\Release\net6.0-windo
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.csproj.AssemblyReference.cache
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.FrmPrincipal.resources
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.FrmRegistroRefeicao.resources
+C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.FrmRelatorio.resources
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.csproj.GenerateResource.cache
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.AssemblyInfoInputs.cache
@@ -63,4 +64,3 @@ C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windo
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.pdb
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.genruntimeconfig.cache
 C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\ref\diario_de_refeicoes.dll
-C:\Projetos.GIT\diario_de_refeicoes\diario_de_refeicoes\obj\Release\net6.0-windows\diario_de_refeicoes.FrmRelatorio.resources

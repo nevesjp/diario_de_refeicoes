@@ -179,6 +179,7 @@ namespace diario_de_refeicoes
 
                 // Atualiza com a nova data
                 mskDataInicial.Text = dataInicial.ToString("dd/MM/yyyy");
+                mskDataFinal.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
                 btnFiltrar_Click(sender, e);
             }
@@ -186,6 +187,72 @@ namespace diario_de_refeicoes
             {
                 MessageBox.Show("Por favor, insira uma data válida.");
             }
+        }
+
+        private void btnAvancar_Click(object sender, EventArgs e)
+        {
+            bool dataInicialOk = false;
+            bool dataFinalOk = false;
+            if (DateTime.TryParse(mskDataInicial.Text, out DateTime dataInicial))
+            {
+                dataInicial = dataInicial.AddDays((1));
+                mskDataInicial.Text = dataInicial.ToString("dd/MM/yyyy");
+                dataInicialOk = true;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira uma data válida.");
+            }
+
+            if (DateTime.TryParse(mskDataFinal.Text, out DateTime dataFinal))
+            {
+                dataFinal = dataFinal.AddDays((1));
+                mskDataFinal.Text = dataFinal.ToString("dd/MM/yyyy");
+                dataFinalOk = true;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira uma data válida.");
+            }
+
+            if (dataInicialOk && dataFinalOk)
+            {
+                btnFiltrar_Click(sender, e);
+            }
+
+        }
+
+        private void btnRetroceder_Click(object sender, EventArgs e)
+        {
+            bool dataInicialOk = false;
+            bool dataFinalOk = false;
+            if (DateTime.TryParse(mskDataInicial.Text, out DateTime dataInicial))
+            {
+                dataInicial = dataInicial.AddDays((-1));
+                mskDataInicial.Text = dataInicial.ToString("dd/MM/yyyy");
+                dataInicialOk = true;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira uma data válida.");
+            }
+
+            if (DateTime.TryParse(mskDataFinal.Text, out DateTime dataFinal))
+            {
+                dataFinal = dataFinal.AddDays((-1));
+                mskDataFinal.Text = dataFinal.ToString("dd/MM/yyyy");
+                dataFinalOk = true;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira uma data válida.");
+            }
+
+            if (dataInicialOk && dataFinalOk)
+            {
+                btnFiltrar_Click(sender, e);
+            }
+
         }
     }
 }
