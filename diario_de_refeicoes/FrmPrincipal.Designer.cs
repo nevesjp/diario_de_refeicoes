@@ -28,21 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             btnRegistrar = new Button();
             btnRelatorio = new Button();
             btnSair = new Button();
+            pictureBox1 = new PictureBox();
+            menuStrip1 = new MenuStrip();
+            registrarRefeiçãoToolStripMenuItem = new ToolStripMenuItem();
+            relatóriosToolStripMenuItem = new ToolStripMenuItem();
+            sairToolStripMenuItem = new ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(117, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(371, 54);
-            label1.TabIndex = 0;
-            label1.Text = "O que deseja fazer?";
             // 
             // btnRegistrar
             // 
@@ -52,6 +48,7 @@
             btnRegistrar.TabIndex = 1;
             btnRegistrar.Text = "Registrar Refeição";
             btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Visible = false;
             btnRegistrar.Click += btnRegistrar_Click;
             // 
             // btnRelatorio
@@ -62,6 +59,7 @@
             btnRelatorio.TabIndex = 2;
             btnRelatorio.Text = "Gerar Relatório";
             btnRelatorio.UseVisualStyleBackColor = true;
+            btnRelatorio.Visible = false;
             btnRelatorio.Click += btnRelatorio_Click;
             // 
             // btnSair
@@ -73,28 +71,76 @@
             btnSair.TabIndex = 3;
             btnSair.Text = "SAIR";
             btnSair.UseVisualStyleBackColor = true;
+            btnSair.Visible = false;
             btnSair.Click += btnSair_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources._b88da0b8_3fb1_4507_a78e_990a37c960dd;
+            pictureBox1.Location = new Point(-13, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(647, 616);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { registrarRefeiçãoToolStripMenuItem, relatóriosToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(622, 24);
+            menuStrip1.TabIndex = 5;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // registrarRefeiçãoToolStripMenuItem
+            // 
+            registrarRefeiçãoToolStripMenuItem.Name = "registrarRefeiçãoToolStripMenuItem";
+            registrarRefeiçãoToolStripMenuItem.Size = new Size(113, 20);
+            registrarRefeiçãoToolStripMenuItem.Text = "Registrar Refeição";
+            registrarRefeiçãoToolStripMenuItem.Click += registrarRefeiçãoToolStripMenuItem_Click;
+            // 
+            // relatóriosToolStripMenuItem
+            // 
+            relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            relatóriosToolStripMenuItem.Size = new Size(71, 20);
+            relatóriosToolStripMenuItem.Text = "Relatórios";
+            relatóriosToolStripMenuItem.Click += relatóriosToolStripMenuItem_Click;
+            // 
+            // sairToolStripMenuItem
+            // 
+            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            sairToolStripMenuItem.Size = new Size(38, 20);
+            sairToolStripMenuItem.Text = "Sair";
             // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(612, 450);
+            ClientSize = new Size(622, 601);
             Controls.Add(btnSair);
             Controls.Add(btnRelatorio);
             Controls.Add(btnRegistrar);
-            Controls.Add(label1);
+            Controls.Add(menuStrip1);
+            Controls.Add(pictureBox1);
+            MainMenuStrip = menuStrip1;
             Name = "FrmPrincipal";
             Text = "FrmPrincipal";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Button btnRegistrar;
         private Button btnRelatorio;
         private Button btnSair;
+        private PictureBox pictureBox1;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem registrarRefeiçãoToolStripMenuItem;
+        private ToolStripMenuItem relatóriosToolStripMenuItem;
+        private ToolStripMenuItem sairToolStripMenuItem;
     }
 }

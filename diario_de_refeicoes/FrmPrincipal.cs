@@ -33,5 +33,17 @@ namespace diario_de_refeicoes
             FrmRelatorio f = new FrmRelatorio();
             f.Show();
         }
+
+        private void registrarRefeiçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRegistroRefeicao f = new FrmRegistroRefeicao();
+            f.Show();
+        }
+
+        private void relatóriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRelatorio f = new FrmRelatorio();
+            f.Show();
+        }
     }
 }
