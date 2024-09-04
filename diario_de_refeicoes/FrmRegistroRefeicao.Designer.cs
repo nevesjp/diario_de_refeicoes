@@ -34,43 +34,51 @@
             cmbRefeicao = new ComboBox();
             cmbRealizado = new ComboBox();
             btnSalvar = new Button();
-            label1 = new Label();
             dtTimeRealizado = new DateTimePicker();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Location = new Point(83, 109);
+            lblNome.BackColor = Color.MintCream;
+            lblNome.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNome.ForeColor = SystemColors.ControlText;
+            lblNome.Location = new Point(205, 194);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(55, 15);
+            lblNome.Size = new Size(57, 14);
             lblNome.TabIndex = 0;
             lblNome.Text = "Refeição:";
             // 
             // lblDataRealizado
             // 
             lblDataRealizado.AutoSize = true;
-            lblDataRealizado.Location = new Point(51, 144);
+            lblDataRealizado.BackColor = Color.MintCream;
+            lblDataRealizado.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDataRealizado.Location = new Point(205, 250);
             lblDataRealizado.Name = "lblDataRealizado";
-            lblDataRealizado.Size = new Size(87, 15);
+            lblDataRealizado.Size = new Size(89, 14);
             lblDataRealizado.TabIndex = 1;
             lblDataRealizado.Text = "Data Realizado:";
             // 
             // lblRealizado
             // 
             lblRealizado.AutoSize = true;
-            lblRealizado.Location = new Point(78, 178);
+            lblRealizado.BackColor = Color.MintCream;
+            lblRealizado.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRealizado.Location = new Point(205, 308);
             lblRealizado.Name = "lblRealizado";
-            lblRealizado.Size = new Size(60, 15);
+            lblRealizado.Size = new Size(60, 14);
             lblRealizado.TabIndex = 2;
             lblRealizado.Text = "Realizado:";
             // 
             // cmbRefeicao
             // 
             cmbRefeicao.FormattingEnabled = true;
-            cmbRefeicao.Location = new Point(154, 101);
+            cmbRefeicao.Location = new Point(205, 212);
             cmbRefeicao.Name = "cmbRefeicao";
-            cmbRefeicao.Size = new Size(188, 23);
+            cmbRefeicao.Size = new Size(202, 23);
             cmbRefeicao.TabIndex = 3;
             cmbRefeicao.SelectedValueChanged += cmbRefeicao_SelectedValueChanged;
             cmbRefeicao.Leave += cmbRefeicao_Leave;
@@ -79,14 +87,14 @@
             // 
             cmbRealizado.Enabled = false;
             cmbRealizado.FormattingEnabled = true;
-            cmbRealizado.Location = new Point(154, 178);
+            cmbRealizado.Location = new Point(205, 326);
             cmbRealizado.Name = "cmbRealizado";
-            cmbRealizado.Size = new Size(188, 23);
+            cmbRealizado.Size = new Size(202, 23);
             cmbRealizado.TabIndex = 5;
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(366, 178);
+            btnSalvar.Location = new Point(332, 441);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 23);
             btnSalvar.TabIndex = 6;
@@ -94,40 +102,41 @@
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(154, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(180, 54);
-            label1.TabIndex = 7;
-            label1.Text = "Registrar";
-            // 
             // dtTimeRealizado
             // 
             dtTimeRealizado.Enabled = false;
-            dtTimeRealizado.Location = new Point(154, 138);
+            dtTimeRealizado.Location = new Point(205, 268);
             dtTimeRealizado.Name = "dtTimeRealizado";
-            dtTimeRealizado.Size = new Size(188, 23);
+            dtTimeRealizado.Size = new Size(202, 23);
             dtTimeRealizado.TabIndex = 8;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources._47392b33_9472_4b4e_a463_83b9e00f778a;
+            pictureBox1.Location = new Point(-3, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(617, 614);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
             // 
             // FrmRegistroRefeicao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(495, 260);
+            ClientSize = new Size(612, 614);
             Controls.Add(dtTimeRealizado);
-            Controls.Add(label1);
             Controls.Add(btnSalvar);
             Controls.Add(cmbRealizado);
             Controls.Add(cmbRefeicao);
             Controls.Add(lblRealizado);
             Controls.Add(lblDataRealizado);
             Controls.Add(lblNome);
+            Controls.Add(pictureBox1);
             Name = "FrmRegistroRefeicao";
-            Text = "FrmRegistroRefeicao";
+            Text = "Registrar Refeição";
             Load += FrmRegistroRefeicao_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -140,7 +149,7 @@
         private ComboBox cmbRefeicao;
         private ComboBox cmbRealizado;
         private Button btnSalvar;
-        private Label label1;
         private DateTimePicker dtTimeRealizado;
+        private PictureBox pictureBox1;
     }
 }

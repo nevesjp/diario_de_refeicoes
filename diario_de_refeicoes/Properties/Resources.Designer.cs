@@ -63,6 +63,26 @@ namespace diario_de_refeicoes.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _10fde140_6544_4149_b584_2f14b0b90df1 {
+            get {
+                object obj = ResourceManager.GetObject("_10fde140-6544-4149-b584-2f14b0b90df1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _47392b33_9472_4b4e_a463_83b9e00f778a {
+            get {
+                object obj = ResourceManager.GetObject("_47392b33-9472-4b4e-a463-83b9e00f778a", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _77e24fcf_afd7_4a39_913d_74d564a5b05f {
             get {
                 object obj = ResourceManager.GetObject("_77e24fcf-afd7-4a39-913d-74d564a5b05f", resourceCulture);

@@ -43,8 +43,10 @@
             btnLast7Days = new Button();
             btnAvancar = new Button();
             btnRetroceder = new Button();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)grdResult).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDias).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // mskDataInicial
@@ -67,7 +69,7 @@
             // 
             // btnFiltrar
             // 
-            btnFiltrar.Location = new Point(533, 76);
+            btnFiltrar.Location = new Point(452, 605);
             btnFiltrar.Name = "btnFiltrar";
             btnFiltrar.Size = new Size(75, 23);
             btnFiltrar.TabIndex = 4;
@@ -78,11 +80,11 @@
             // grdResult
             // 
             grdResult.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grdResult.Location = new Point(12, 106);
+            grdResult.Location = new Point(1, 221);
             grdResult.Name = "grdResult";
             grdResult.ReadOnly = true;
             grdResult.RowTemplate.Height = 25;
-            grdResult.Size = new Size(596, 307);
+            grdResult.Size = new Size(538, 307);
             grdResult.TabIndex = 5;
             // 
             // lblPontosSomados
@@ -154,9 +156,9 @@
             // 
             // prgBarTeste
             // 
-            prgBarTeste.Location = new Point(12, 419);
+            prgBarTeste.Location = new Point(1, 634);
             prgBarTeste.Name = "prgBarTeste";
-            prgBarTeste.Size = new Size(596, 23);
+            prgBarTeste.Size = new Size(538, 23);
             prgBarTeste.TabIndex = 14;
             // 
             // btnLast7Days
@@ -189,11 +191,22 @@
             btnRetroceder.UseVisualStyleBackColor = true;
             btnRetroceder.Click += btnRetroceder_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Image = Properties.Resources._10fde140_6544_4149_b584_2f14b0b90df1;
+            pictureBox1.Location = new Point(1, 105);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(538, 534);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 18;
+            pictureBox1.TabStop = false;
+            // 
             // FrmRelatorio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(616, 453);
+            ClientSize = new Size(538, 657);
             Controls.Add(btnRetroceder);
             Controls.Add(btnAvancar);
             Controls.Add(btnLast7Days);
@@ -209,10 +222,12 @@
             Controls.Add(btnFiltrar);
             Controls.Add(mskDataFinal);
             Controls.Add(mskDataInicial);
+            Controls.Add(pictureBox1);
             Name = "FrmRelatorio";
-            Text = "FrmRelatorio";
+            Text = "Relatório";
             ((System.ComponentModel.ISupportInitialize)grdResult).EndInit();
             ((System.ComponentModel.ISupportInitialize)numDias).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -234,5 +249,6 @@
         private Button btnLast7Days;
         private Button btnAvancar;
         private Button btnRetroceder;
+        private PictureBox pictureBox1;
     }
 }
